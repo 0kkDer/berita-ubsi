@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7f2" />
+    <meta name="description" content="Berita aktual, tren populer, dan cerita mahasiswa UBSI." />
+    <title>UBSI Kini — Berita, Tren, Cerita Kita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="topline">
+      <div class="shell topline-inner">
+        <span>UNIVERSITAS BINA SARANA INFORMATIKA</span>
+        <span class="today" id="today"></span>
+      </div>
+    </div>
+
+    <header class="site-header shell">
+      <div class="brand-cluster">
+        <a class="brand" href="#beranda" aria-label="UBSI Kini, beranda">
+          <img class="brand-logo" src="https://www.bsi.ac.id/storage/logo_UBSI.webp" alt="Logo resmi UBSI" />
+          <span class="brand-name">UBSI <b>KINI</b><small>TRENDING, LIFESTYLE, CERITA</small></span>
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a class="nav-link active" href="#beranda">Beranda</a>
+        <a class="nav-link" href="#terbaru">Berita</a>
+        <a class="nav-link" href="#terbaru">Lifestyle</a>
+        <a class="nav-link" href="#tentang">Tentang</a>
+      </nav>
+      <label class="search-box" for="search-input">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg>
+        <input id="search-input" type="search" placeholder="Cari berita..." autocomplete="off" />
+        <kbd>/</kbd>
+      </label>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="ticker-wrap">
+      <div class="shell ticker-inner">
+        <span class="ticker-label">SUMBER</span>
+        <div class="ticker-track">
+          <span>Sumber berita: Kompas.com dan Tempo.co</span>
+          <span>•</span>
+          <span>Berita terbaru dari dua media pilihan</span>
+          <span>•</span>
+          <span>Feed diperbarui saat server berita tersambung</span>
+        </div>
+      </div>
+    </div>
+
+    <main id="beranda">
+      <section class="lead-section shell" aria-labelledby="lead-title">
+        <div class="section-kicker"><span class="live-dot"></span> KABAR TERKINI <span class="kicker-rule"></span><span class="issue">UPDATE & LIFESTYLE</span></div>
+        <article class="lead-story" id="lead-story" tabindex="0" role="button" aria-label="Baca berita utama">
+          <div class="lead-image-wrap">
+            <img id="lead-image" src="images/pkm-sdn-pamulang-tengah.jpeg" alt="Mahasiswa UBSI berfoto bersama siswa SDN Pamulang Tengah setelah kegiatan edukasi literasi digital" />
+              <span class="image-caption">PENGABDIAN KEPADA MASYARAKAT</span>
+          </div>
+          <div class="lead-copy">
+            <span class="category-label" id="lead-category">KAMPUS</span>
+            <h1 id="lead-title">Mahasiswa Ilmu Komunikasi UBSI Edukasi Siswa SDN Pamulang Tengah Bermedia Sosial dengan Aman</h1>
+            <p class="lead-summary" id="lead-summary">Edukasi literasi digital untuk 31 siswa kelas 5C membahas privasi, hoaks, dan etika bermedia sosial.</p>
+            <div class="byline"><span class="byline-avatar">U</span><span><b id="lead-author">Tim PKM Ilmu Komunikasi UBSI</b><small id="lead-meta">13 Nov 2026 · 3 menit baca</small></span><span class="read-arrow" aria-hidden="true">↗</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="highlights shell" aria-label="Pilihan editor UBSI Kini">
+        <div class="highlight-feature">
+          <div class="mini-label">CAMPUS PULSE</div>
+          <h3>Nyaris semua orang menunggu: bagaimana kampus, tren, dan hidup mahasiswa bisa masuk satu ruang.</h3>
+          <p>UBSI Kini menghadirkan berita yang relevan, ringan, dan dekat dengan keseharian mahasiswa—dari isu viral sampai gaya hidup sehari-hari.</p>
+          <a href="#terbaru">Lihat semua update <span aria-hidden="true">↗</span></a>
+          <div class="mini-metrics">
+            <div><strong id="live-total">24</strong><span>Berita</span></div>
+            <div><strong id="live-categories">4</strong><span>Kategori</span></div>
+            <div><strong id="live-updated">--:--</strong><span>Update</span></div>
+          </div>
+        </div>
+        <div class="highlight-stack">
+          <article class="mini-card">
+            <span class="mini-kicker">VIRAL</span>
+            <h4>Video dugaan kekerasan terhadap pekerja migran jadi perhatian</h4>
+          </article>
+          <article class="mini-card">
+            <span class="mini-kicker">KREATOR</span>
+            <h4>Aturan usaha dan hak cipta ikut dibahas kreator digital</h4>
+          </article>
+        </div>
+      </section>
+
+      <section class="news-section shell" id="terbaru" aria-labelledby="news-heading">
+        <div class="news-heading-row">
+          <div><span class="eyebrow">YANG LAGI RAMAI & UPDATE</span><h2 id="news-heading">Berita <em>terbaru</em></h2></div>
+          <a href="#terbaru" class="all-news" id="all-news">Semua berita <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="category-bar" role="group" aria-label="Filter kategori berita">
+          <button class="filter-chip selected" data-category="Semua" aria-pressed="true">Semua</button>
+          <button class="filter-chip" data-category="Berita" aria-pressed="false">Berita</button>
+          <button class="filter-chip" data-category="Kampus" aria-pressed="false">Kampus</button>
+          <button class="filter-chip" data-category="Viral" aria-pressed="false">Viral</button>
+          <button class="filter-chip" data-category="Lifestyle" aria-pressed="false">Lifestyle</button>
+          <button class="filter-chip" data-category="Kreator" aria-pressed="false">Kreator</button>
+          <button class="filter-chip" data-category="Tips" aria-pressed="false">Tips</button>
+          <span class="result-count" id="result-count"></span>
+        </div>
+        <p class="feed-status" id="feed-status" role="status" aria-live="polite">Menghubungkan ke sumber berita...</p>
+        <div class="news-grid" id="news-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>Belum ada berita yang cocok. Coba kata kunci atau kategori lain.</p>
+      </section>
+
+    </main>
+
+    <footer class="site-footer" id="tentang">
+      <div class="shell footer-inner"><a class="brand footer-brand" href="#beranda"><img class="brand-logo" src="https://www.bsi.ac.id/storage/logo_UBSI.webp" alt="Logo resmi UBSI" /><span class="brand-name">UBSI <b>KINI</b><small>BERITA, TREN, CERITA KITA</small></span></a><p>Berita aktual, tren populer, dan cerita mahasiswa UBSI.</p><span class="footer-note">© 2026 UBSI Kini · Media kampus</span></div>
+    </footer>
+
+    <dialog class="article-dialog" id="article-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" id="dialog-close" aria-label="Tutup berita"><span></span><span></span></button>
+      <img class="dialog-image" id="dialog-image" alt="" />
+      <div class="dialog-content"><span class="category-label" id="dialog-category"></span><h2 id="dialog-title"></h2><div class="dialog-byline" id="dialog-byline"></div><p id="dialog-body"></p><div class="source-list" id="dialog-sources"></div><button class="share-button" id="share-button"><span aria-hidden="true">↗</span> Bagikan berita</button></div>
+    </dialog>
+  </body>
+</html>
